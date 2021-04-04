@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>About Me</h1>
+  <img class="image-me img-fluid" style="width: 131px; padding: 15px; padding-left: 0px;" src="{{ url_for('static', filename='img/' + 'AchintyaPic.jpeg') }}"/>
+  <p>
+        Hey, I am a high school senior at Ahlcon International School. I have
+        been a STEM enthusiast throughout high school, and not so
+        surprisingly, I plan to major in Physics and Computer Science. Python
+        is my thing folks; and as you might have figured, HTML isnt.
+
+        <p>
+        I am interested in Machine Learning and Data Science, and I have made some cool projects that you can check out at my <a href="https://github.com/achintya5">Github profile</a>. I have been using python for more than 3 years now, and I am proficient in major libraries such as Pytorch, Pandas, Numpy, Open-CV, and many more. Check out more about my programming journey and experience <a href="{{ url_for('main.programming') }}">here.</a>
+        </p>
+        Apart from academics, I have been interested in quite a few fields
+        throughout my school years- prominently Taekwondo, music, and writing. 
+        <br>
+        Next up for you is what I like to call- 
+        <br>
+        Four years of
+      <a href="{{ url_for('main.highschool') }}"> High School </a>
+      in 5 minutes.
+      <br>
+      <p>
+        I also have a
+        <a href="https://www.youtube.com/watch?v=Y3K-XDYvTuc"
+          >Youtube channel</a
+        >
+        where I upload guitar-cover videos, and occasionally, some Taekwondo
+        tutorials.
+      </p>
+      <p>
+        Contact me at- <a href="mailto:achintyajha05@gmail.com?subject=Questions/Concerns" style="color: #007bff">achintyajha05@gmail.com</a>.
+      </p>
+  </p>
+{% endblock content %}

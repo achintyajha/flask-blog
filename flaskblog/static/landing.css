@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url(//db.onlinewebfonts.com/c/046e1373d00f74810d24a0f19010b1cc?family=BergenSans-Regular);
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+	font-family: 'Open Sans', sans-serif;
+}
+
+.content-section {
+    background: #d3c1de;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    max-width: 600px;
+    position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-image: url('img/code-min.jpg');
+	background-size: cover;
+}
+
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 40px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #000000;
+}
+
+.brand{
+	font-size: 2em;
+	font-family: 'Jost', sans-serif;
+}
+
+
+.content-section h2{
+	font-family: 'Jost', sans-serif;
+	color: #000000;
+	font-size: 2.5em;
+	margin-bottom: 10px;
+	line-height: 1.4em;
+	font-weight: 700;
+}
+
+.content-section p{
+	color: #000000;
+	font-family: 'Bergen Sans', sans-serif;
+	line-height: 1em;
+	font-size: 1.75em;
+}
+
+.content-section a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+	background: #e51e2a;
+	color: #fff;
+	border-radius: 40px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.content-section a:hover{
+	cursor: pointer;
+	background: #fff;
+	color: #e51e2a;
+	transition-duration: 0.5s;
+}
+
+
+.sci{
+	position: absolute;
+	bottom: 40px;
+	left: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sci li{
+	list-style: none;
+}
+
+.sci li a{
+	display: inline-block;
+	margin-left: 15px;
+	background: white;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+}
+
+.sci li a:hover{
+	background: #000000;
+	transform: translateY(-10px);
+}
+
+.sci li a img{
+	filter: invert(1);
+	transform: scale(0.5);
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 3px;
+  font-size: 30px;
+  width: 42px;
+  height: 38px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 14%;
+  color: black;
+  transition: 0.3s;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  transition-duration: 0.4s;
+  opacity: 0.9;
+  background: #000000;
+  color: white;
+  text-decoration: none;
+}
+
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 180px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+}
+
+.content .imgBox{
+	width: 500px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+.content .imgBox img{
+	max-width: 150px;
+}
+
+.swiper-slide img {
+	position: absolute;
+	bottom: 0;
+	max-height: 100%;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left, 
+.swiper-container-3d .swiper-slide-shadow-right
+{
+    background-image: none;
+}
+
+
+@media (max-width: 991px){
+	header
+	{
+		padding: 40px;
+	}
+	section
+	{
+		padding: 150px 40px;
+	}
+	.sci
+	{
+		left: 50%;
+		right: 50%;
+		bottom: 90px;
+	}
+	.swiper-slide
+	{
+		height: 300px;
+	}
+
+	.content-section 
+	{
+		background: #d3c1de;
+	    padding: 10px 20px;
+	    border: 1px solid #dddddd;
+	    border-radius: 3px;
+	    margin-bottom: 20px;
+	    max-width: 700px;
+	    position: relative;
+		left: auto;
+		top: auto;
+		transform: translate(0%, 0%);
+	}
+
+}
+
+
+@media (max-width: 470px){
+
+	.content-section p
+		{
+			font-size: 1em;
+		}
+
+	.content-section h2
+		{
+			font-size: 1.5em;
+		}
+	.content-section a
+		{
+			font-size: 0.75em;
+		}
+}
+
+@media (max-width: 400px){
+	.content-section 
+	{
+		background: #d3c1de;
+	    padding: 14px;
+	    border: 1px solid #dddddd;
+	    border-radius: 3px;
+	    margin-bottom: 20px;
+	    max-width: 700px;
+	    position: relative;
+		top: auto;
+		transform: translate(0%, 0%);
+	}
+
+	.content-section p
+		{
+			font-size: 1em;
+		}
+
+	.content-section h2
+		{
+			font-size: 1.5em;
+		}
+	.content-section a
+		{
+			font-size: 0.75em;
+		}
+}
+

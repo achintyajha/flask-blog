@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Blog</h1>
+    <br>
+    {% for post in posts.items %}
+        <article class="media blog-section">
+          <div class="media-body">
+            <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></h2>
+            <div class="article-metadata">
+              <small class="dates">{{ post.date_posted.strftime("%a, %d %b %Y") }} at {{ post.date_posted.strftime("%I:%M %p") }}</small>
+            </div>
+            <div id="module" class="container">
+            <p class="collapse blog-content" id="contentCollapse" aria-expanded="false">
+              {{ post.content }}
+            </p>
+            <a class="btn btn-sm btn-primary" href="{{ url_for('posts.post', post_id=post.id) }}" style="color: white">Read More</a>
+            <hr>
+          </div>
+          </div>
+        </article>
+
+    {% endfor %}
+        
+    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+      {% if page_num %}
+        {% if posts.page == page_num %}
+          <a class="btn btn-info mb-4" href="{{ url_for('main.blog', page=page_num) }}">{{ page_num }}</a>
+        {% else %}
+          <a class="btn btn-outline mb-4" href="{{ url_for('main.blog', page=page_num) }}">{{ page_num }}</a>
+        {% endif %}
+      {% else %}
+        ...
+      {% endif %}
+    {% endfor %}
+{% endblock content %}
